@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+body
+{
+	
+	text-align: center;
+	background-image: url(../imagenes/fondoDia.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover; 
+	/*
+	  background: linear-gradient(to bottom, #8e0e00, #1f1c18);
+	  */
+	 
+	  /*
+	 background: linear-gradient(to top, #924444, #F79F81);
+	*/
+	}
+
+input.campo  {
+	outline: none !important;
+	background-color: rgb(245, 245, 245);
+	border: 0;
+	border-bottom: rgb(255, 200, 200) 5px solid;
+	-webkit-box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5)
+		!important;
+	-moz-box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5)
+		!important;
+	box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.barra {
+	-webkit-box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+}
+
+.todo {
+	border: rgba(255, 200, 200, 0.2) 5px solid;
+	background-color: rgba(245, 245, 245, 0.9);
+	-webkit-box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+}
+
+.btn{
+	
+	border-radius: 0 !important;
+}
