@@ -26,7 +26,38 @@ input.campo  {
 		!important;
 	-moz-box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5)
 		!important;
-	box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5) !important;
+	box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5);
+}
+
+input.campo:focus {
+     
+     outline: none !important;
+	background-color: rgb(245, 245, 245);
+	border: 0;
+	border-bottom: rgb(255, 50, 50) 5px solid;
+	-webkit-box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5)
+		!important;
+	-moz-box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5)
+		!important;
+	box-shadow: inset -2px -7px 16px -20px rgba(0, 0, 0, 0.5) ;
+	animation-duration: 0.5s;
+  animation-name: slidein;
+	
+}
+
+@keyframes slidein {
+  from {
+    
+    margin-top: 2%;
+    width: 90%
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+  
+  
 }
 
 .barra {
@@ -43,7 +74,38 @@ input.campo  {
 	box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
 }
 
+.titular {
+	border: rgba(85, 85, 105, 0.2) 5px solid;
+	background-color: rgba(85, 85, 105, 0.9);
+	color: aqua;
+	
+	-webkit-box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 60px -13px rgba(0, 0, 0, 0.4);
+}
+
+.titulo{
+	font: bold;
+	font-size: 100px;
+}
+
+.sinfondo{
+	background: #333;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255,255)), to(rgb(255, 255, 255)));
+background: -moz-linear-gradient(top,  rgb(255, 255, 255),  rgb(255, 255, 255));
+
+}
+
 .btn{
 	
 	border-radius: 0 !important;
 }
+
+
+     .value {
+        font-weight: bold;
+    }
+     
+    .ui-carousel {
+        margin-bottom: 20px;
+    }
