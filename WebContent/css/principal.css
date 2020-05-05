@@ -109,3 +109,9 @@ background: -moz-linear-gradient(top,  rgb(255, 255, 255),  rgb(255, 255, 255));
     .ui-carousel {
         margin-bottom: 20px;
     }
+.card-header{
+	background: #1488CC;  
+    background: -webkit-linear-gradient(to right,rgb(15, 68, 85), #17a2b8);  
+    background: linear-gradient(to right, rgb(15, 68, 85),#17a2b8);
+    color:white;
+}
