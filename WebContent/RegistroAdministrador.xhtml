@@ -29,8 +29,7 @@ text-align: center;
 <p:breadCrumb class="barra" style="background: rgba(130,30,30,0.2); font-size:14px" >
 		<p:menuitem value="Categories" url="#" />
 		
-		<p:menuitem value="Registro" url="RegistroCliente.xhtml#" />
-		<p:menuitem value="Principal" url="Principal.xhtml#" />
+		<p:menuitem value="Inicio" url="index.xhtml#" />
 	</p:breadCrumb>
 	
 
@@ -56,14 +55,20 @@ text-align: center;
 
 <p:panel id="basic" header="Informacion General"  style="margin-bottom:20px">
 <h:panelGrid columns="4" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="ui-fluid">
-    <p:outputLabel for="nombre" value="Nombre:" />
-    <p:inputText class="campo"  id="nombre" placeholder="Nombre"/>
+    <p:outputLabel for="nombre" value="Nombre(s):" />
+    <p:inputText class="campo"  id="nombre" placeholder="Nombre(s)"/>
  
-    <p:outputLabel for="apellido" value="Apellido:" />
-    <p:inputText class="campo"  id="apellido" placeholder="Apellido"/>
+    <p:outputLabel for="apellido" value="Apellidos:" />
+    <p:inputText class="campo"  id="apellido" placeholder="Apellidos"/>
  
     <p:outputLabel for="cedula" value="Cedula:" />
     <p:inputText class="campo" id="cedula" placeholder="Cedula"/>
+    
+            <p:outputLabel for="sede" value="Sede: " />
+            <p:selectOneMenu id="sede" value="#{metodo}" style="width:230px">
+                <f:selectItem itemLabel="habia ponido mi sede aqui" itemValue="" noSelectionOption="false" />
+                <f:selectItems value="#{otroMetodo}" />
+            </p:selectOneMenu>
  </h:panelGrid>
  </p:panel>
 
