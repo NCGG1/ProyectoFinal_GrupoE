@@ -17,12 +17,6 @@
     
     </h:head>
 <h:body style="margin:0px;font-size:16px;">
-	<p:breadCrumb class="barra" style="background: rgba(130,30,30,0.2); font-size:14px" >
-		<p:menuitem value="Categories" url="#" />
-		
-		<p:menuitem value="Registro" url="RegistroCliente.xhtml#" />
-		<p:menuitem value="Principal" url="Principal.xhtml#" />
-	</p:breadCrumb>
 
 	
 	<div class=" todo mx-auto p-3 justify-content-center row ui-md-6 my-5">
@@ -30,7 +24,7 @@
 		
 		
 		
-<h1>Título Login</h1>
+<h1>Título chimba</h1>
 
 
 			<h:form id="form">
@@ -77,15 +71,16 @@
 
 			<div class="ui-g">
 				<div class="ui-g-12 ui-md-6 ui-lg-4"> 
-					<p:link value="Registrar como usuario" outcome="registro" ajax="false" ></p:link>
+					<p:link value="Registrar como usuario" outcome="RegistroCliente" ajax="false" ></p:link>
 				</div>
 				<div class="ui-g-12 ui-md-6 ui-lg-4">
-					<p:link value="Registrar como vendedor" outcome="registro" ajax="false"/> 
+					<p:link value="Registrar como vendedor" outcome="RegistroVendedor" ajax="false"/> 
 				</div>
 				<div class="ui-g-12 ui-md-6 ui-lg-4">
-					<p:link value="Registrar administrador" outcome="registro" ajax="false" /> 
-					
-					
+					<p:link value="Registrar administrador" outcome="RegistroAdministrador" ajax="false" /> 					
+				</div>
+				<div>
+					<p:link value="Registrar gerente" outcome="RegistroGerente"	ajax="false" />
 				</div>
 
 			</div>

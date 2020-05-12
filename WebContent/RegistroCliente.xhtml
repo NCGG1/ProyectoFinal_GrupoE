@@ -1,9 +1,12 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:p="http://primefaces.org/ui">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<h:head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ <h:head>
 
 	<link rel="stylesheet" type="text/css" href="./css/principal.css" />
 	<link rel="stylesheet"
@@ -19,224 +22,84 @@
 
 
 </h:head>
-<h:body style="margin:0px;font-size:16px;">
-	<p:breadCrumb class="barra"
-		style="background: rgba(130,30,30,0.2); font-size:14px">
+<h:body style="margin:0px;font-size:16px;
+text-align: center;
+	
+ ">
+<p:breadCrumb class="barra" style="background: rgba(130,30,30,0.2); font-size:14px" >
 		<p:menuitem value="Categories" url="#" />
-
-		<p:menuitem value="Registro" url="RegistroCliente.xhtml#" />
-		<p:menuitem value="Principal" url="Principal.xhtml#" />
+		
+		<p:menuitem value="Inicio" url="index.xhtml#" />
 	</p:breadCrumb>
+	
 
-<h:form id="fosa">
-		<div
-			class=" todo mx-auto p-3 justify-content-center row ui-md-10 mt-5">
+<div class=" flex-row-reverse row ui-md-12  bg-dark">
 
-
-
-			<div>
-				<h1>Registro de cliente</h1>
-			</div>
-			<p:spacer width="500" height="10" />
-			<div class="ml-3">
-				<h2>Información Personal</h2>
-			</div>
-			<p:spacer width="500" height="10" />
-
-			<p:messages id="messages" escape="false" showIcon="false"
-				showDetail="true" closable="true" style="font-size: 0.8em">
-				<p:autoUpdate />
-			</p:messages>
+  <h1  style="color: aqua;" >T-VEO</h1>
+  
+  </div>
+<br></br>
 
 
+<div class="container">
+<div class="card  border-info  mb-3 shadow-lg p-3 mb-5 bd-white">
+	<div class="card-body">
+	<div style="background: #1488CC;  
+    background: -webkit-linear-gradient(to right,rgb(15, 68, 85), #17a2b8);  
+    background: linear-gradient(to right, rgb(15, 68, 85),#17a2b8);
+    color:white;"  class="card-header">Registro Usuario</div>
+		
+		<h:form id="form">
+<br></br> 
+<br></br> 
 
-			<div class="ui-g-12 ml-4">
+<p:panel id="basic" header="Informacion General"  style="margin-bottom:20px">
+<h:panelGrid columns="4" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="ui-fluid">
+    <p:outputLabel for="nombre" value="Nombre(s):" />
+    <p:inputText class="campo"  id="nombre" placeholder="Nombre(s)"/>
+ 
+    <p:outputLabel for="apellido" value="Apellidos:" />
+    <p:inputText class="campo"  id="apellido" placeholder="Apellidos"/>
+ 
+    <p:outputLabel for="cedula" value="Cedula:" />
+    <p:inputText class="campo" id="cedula" placeholder="Cedula"/>
+ </h:panelGrid>
+ </p:panel>
 
-				<div class="ui-g-12 ui-md-6 ui-lg-3" style="font-size: 18px">Nombre(s)</div>
-				<div class="ui-inputgroup">
-					<span class="ui-inputgroup-addon "
-						style="border: 0; background: aqua;"><i class="pi pi-user"
-						style="font-size: 1.3em;"></i></span>
-					<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-						id="nombre" placeholder="Nombre(s)" required="true"
-						requiredMessage="Error de nombre: se necesita un valor." />
-
-				</div>
-			</div>
-			<p:message class="ui-g-12 ui-md-3 ml-4" display="text"
-				style="font-size: 0.8em" for="nombre" />
-
-			<div class="ui-g-12 ml-4">
-
-				<div class="ui-g-12 ui-md-6 ui-lg-3" style="font-size: 18px">Apellidos</div>
-				<div class="ui-inputgroup">
-					<span class="ui-inputgroup-addon "
-						style="border: 0; background: aqua;"><i class="fa fa-child"
-						style="font-size: 1.3em;"></i></span>
-					<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-						id="apellidos" placeholder="Apellidos" required="true"
-						requiredMessage="Error de apellidos: se necesita un valor." />
-
-				</div>
-			</div>
-			<p:message class="ui-g-12 ui-md-3 ml-4" display="text"
-				style="font-size: 0.8em" for="apellidos" />
-			<div class="ui-g-12 ml-4">
-
-				<div class="ui-g-12 ui-md-6 ui-lg-3" style="font-size: 18px">Cédula</div>
-				<div class="ui-inputgroup">
-					<span class="ui-inputgroup-addon "
-						style="border: 0; background: aqua;"><i class="pi pi-id-card"
-						style="font-size: 1.3em;"></i></span>
-					<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-						id="cedula" placeholder="Número de identificación" required="true"
-						requiredMessage="Error de cédula: se necesita un valor." >
-						<f:validator validatorId="validarNumero"></f:validator>
-						</p:inputText>
-						
-
-				</div>
-			</div>
-			<p:message class="ui-g-12 ui-md-3 ml-4" display="text"
-				style="font-size: 0.8em" for="cedula" />
-
-
-
+<p:panel id="dom" header="Domicilio" style="margin-bottom:20px">
+<h:panelGrid columns="4" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="ui-fluid">
+    <p:outputLabel for="departamento" value="Departamento:" />
+    <p:inputText class="campo"  id="departamento" placeholder="Departamento" />
+ 
+    <p:outputLabel for="ciudad" value="Ciudad:" />
+    <p:inputText class="campo"  id="ciudad" placeholder="Ciudad" />
+ 
+    <p:outputLabel for="direccion" value="Direccion:" />
+    <p:inputText class="campo"  id="direccion" placeholder="Direccion" />
+ </h:panelGrid>
+ </p:panel>
+ <p:panel id="tar" header="Tarjeta credito"  style="margin-bottom:20px"><font></font>
+<h:panelGrid columns="4" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="ui-fluid">
+    <p:outputLabel for="numero" value="Numero:" />
+    <p:inputText class="campo" id="numero" placeholder="Numero" />
+ 
+    <p:outputLabel for="nomtar" value="Nombre en tarjeta:" />
+    <p:inputText class="campo"  id="nomtar" placeholder="Nombre" />
+ 
+    <p:outputLabel for="CVV" value="CVV:" ></p:outputLabel>
+    <p:inputText  class="campo" id="CVV" placeholder="CVV" />
+ </h:panelGrid> </p:panel>
+ 
+ 
+		
+			<div class="flex-row-reverse row ui-md-12">
+			<h:button class="btn btn-outline-info " value="Registrarse"  ></h:button></div>
+		</h:form> 
+		
+	
+		</div>
+		</div>
 		</div>
 
-		<div
-			class=" todo mx-auto p-3 justify-content-center row ui-md-10 mt-1">
-
-			<div>
-				<h2>Domicilio</h2>
-			</div>
-			<p:spacer width="500" height="10" />
-			<div class="ui-g-12">
-
-					<div class="ui-g-12 ui-md-6 ui-lg-3" style="font-size: 18px">Departamento</div>
-					<div class="ui-inputgroup ui-g-12 ui-md-6 ui-lg-3">
-						<span class="ui-inputgroup-addon "
-							style="border: 0; background: aqua;"><i class="pi pi-map-marker"
-							style="font-size: 1.3em;"></i></span>
-						<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-							id="departamento" placeholder="Departamento" required="true"
-							requiredMessage="Error de departamento: se necesita un valor." />
-
-					</div>
-				
-				
-					<div class="ui-g-10 ui-md-5 ui-lg-2" style="font-size: 18px">Ciudad</div>
-					<div class="ui-inputgroup ui-g-12 ui-md-6 ui-lg-3">
-						<span class="ui-inputgroup-addon "
-							style="border: 0; background: aqua;"><i class="fa fa-photo"
-							style="font-size: 1.3em;"></i></span>
-						<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-							id="ciudad" placeholder="Ciudad" required="true"
-							requiredMessage="Error de ciudad: se necesita un valor." />
-
-					</div>
-				</div>
-			
-			<p:message class="ui-g" display="text" style="font-size: 0.8em"
-				for="departamento" />
-			<p:message class="ui-g" display="text" style="font-size: 0.8em"
-				for="ciudad" />
-
-
-			<div class="ui-g-12 ml-4">
-
-				<div class="ui-g-12 ui-md-6 ui-lg-3" style="font-size: 18px">Dirección</div>
-				<div class="ui-inputgroup">
-					<span class="ui-inputgroup-addon "
-						style="border: 0; background: aqua;"><i class="fa fa-home"
-						style="font-size: 1.3em;"></i></span>
-					<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-						id="direccion" placeholder="Direccion" required="true"
-						requiredMessage="Error de dirección: se necesita un valor." />
-
-				</div>
-			</div>
-			<p:message class="ui-g-12 ui-md-3 ml-4" display="text"
-				style="font-size: 0.8em" for="direccion" />
-
-		</div>
-
-		<div class=" todo mx-auto p-3 justify-content-center row ui-md-10 mt-1 mb-5">
-
-			<div>
-				<h2>
-					Tarjeta de crédito
-					</h2>
-			</div>
-			<p:spacer width="500" height="10" />
-
-			<div class="ui-g-12 ml-4">
-
-				<div class="ui-g-12 ui-md-6 ui-lg-3" style="font-size: 18px">Número</div>
-				<div class="ui-inputgroup">
-					<span class="ui-inputgroup-addon "
-						style="border: 0; background: aqua;"><i class="fa fa-credit-card"
-						style="font-size: 1.3em;"></i></span>
-					<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-						id="tarjeta" placeholder="Número de la tarjeta" required="true"
-						requiredMessage="Error de tarjeta: se necesita un valor." >
-							<f:validator validatorId="validarNumero"></f:validator>
-						</p:inputText>
-
-				</div>
-			</div>
-			<p:message class="ui-g-12 ui-md-3 ml-4" display="text"
-				style="font-size: 0.8em" for="tarjeta" />
-
-			
-		<div class="ui-g-12">
-
-					<div class="ui-g-12 ui-md-6 ui-lg-3" style="font-size: 18px">Nombre en tarjeta</div>
-					<div class="ui-inputgroup ui-g-12 ui-md-6 ui-lg-3">
-						<span class="ui-inputgroup-addon "
-							style="border: 0; background: aqua;"><i class="fa fa-steam"
-							style="font-size: 1.3em;"></i></span>
-						<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-							id="nomTarjeta" placeholder="Nombre en tarjeta" required="true"
-							requiredMessage="Error de nombre: se necesita un valor." />
-
-					</div>
-				
-				
-					<div class="ui-g-8 ui-md-4 ui-lg-2" style="font-size: 18px">CVV</div>
-					<div class="ui-inputgroup ui-g-12 ui-md-6 ui-lg-3">
-						<span class="ui-inputgroup-addon "
-							style="border: 0; background: aqua;"><i class="fa fa-shopping-cart"
-							style="font-size: 1.3em;"></i></span>
-						<p:inputText class="campo ui-inputgroup ui-g-12 ui-md-12 ui-lg-9"
-							id="CVV" placeholder="CVV" required="true"
-							requiredMessage="Error de CVV: se necesita un valor." />
-
-					</div>
-				</div>
-			<p:message class="ui-g" display="text" style="font-size: 0.8em"
-				for="nomTarjeta" />
-			<p:message class="ui-g" display="text" style="font-size: 0.8em"
-				for="CVV" />
-
-
-	</div>
-	<div class=" row flex-row-reverse mb-5">
-		<h:commandButton class="btn btn-dark ui-md-4 " value="Registrar" style="font-size:24px" />
-	</div>
-	
-	
-</h:form>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
 </h:body>
 </html>

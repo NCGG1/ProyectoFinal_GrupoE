@@ -19,7 +19,7 @@
 
 
 </h:head>
-<h:body style="margin:0px;font-size:16px;">
+<h:body >
 
 <f:view>
 	<p:breadCrumb class="barra"
@@ -50,23 +50,46 @@
 			</h:form>
 
 		</div>
-	<div class=" todo mx-auto p-3 justify-content-center row ui-md-10 mb-5">
+		<div
+			class=" todo mx-auto p-3 justify-content-center row ui-md-10 mb-5">
 
 
 
 
-		<h1>Título Principal</h1>
-<p:commandButton class="btn btn-primary rounded-circle pi pi-user sinfondo" style="height:10em; width:10em" value="Categoría 1"></p:commandButton>
-
-		<h:form id="form">
-			<p:commandButton></p:commandButton>
+			<h1>Título Principal</h1>
 			
 
-		</h:form>
+			<h3></h3>
+			<p:spacer width="1700px" height="10" />
 
-		
+			<div class="ui-g-12" style="background: rgb(205,205,205)">
+			
+				
+				<div class="ui-g-8 ml-1" >6
+				<p:scrollPanel mode="native" style="height:400px; background: rgba(0,0,0,0); border: rgba(200,220,200,1) 3px">
+					<p:repeat var="i" value="#{prueba.lista}">
+						<div class="ui-g-5 ml-3" style="background: rgb(155,155,155)">
+							<h:commandButton class="btn rounded-pill sinfondo" style="height:10em; color: rgb(0,0,0); background: rgb(255,255,205)" value="#{i}" ></h:commandButton>
+						
+						</div>
+												
+					</p:repeat>
+					</p:scrollPanel>
+				</div>
+				
+				<div class="ui-g-3 ml-1 mt-3" style="background: rgb(155,155,155)">2
+					<div class="ui-g-12 my-2">
+						<h:commandButton class="btn rounded-pill sinfondo" style="height:10em; color: rgb(0,0,0); background: rgb(255,255,205)" value="Producto más vendido" ></h:commandButton>
+					</div>
+					
+					<div class="ui-g-12 my-2">
+						<h:commandButton class="btn rounded-pill sinfondo" style="height:10em; color: rgb(0,0,0); background: rgb(255,255,205)" value="Otro producto" ></h:commandButton>
+					</div>
+				</div>
+			
+			</div>
 
-	</div>
+		</div>
 	</f:view>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -80,5 +103,7 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"></script>
+		
+		
 </h:body>
 </html>
