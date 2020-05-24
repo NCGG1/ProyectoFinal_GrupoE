@@ -14,6 +14,7 @@
     <h:outputStylesheet library="webjars" name="font-awesome/5.12.0/css/all.min-jsf.css" />
 <h:outputStylesheet library="webjars" name="font-awesome/5.12.0/css/v4-shims.min-jsf.css" />
 
+
     
     </h:head>
 <h:body style="margin:0px;font-size:16px;">
@@ -24,11 +25,11 @@
 		
 		
 		
-<h1>Título chimba</h1>
+<h1>Título Login</h1>
 
 
 			<h:form id="form">
-
+			
 			<p:messages id="messages" escape="false" showIcon="false"
 				showDetail="true" closable="true" style="font-size: 0.8em">
 				<p:autoUpdate />
@@ -39,7 +40,9 @@
 					<div class="ui-g-12 ui-md-7 justify-content-center ml-4">
 						<div class="ui-inputgroup">
 							<span class="ui-inputgroup-addon" style="border: 0; background: aqua;"><i class="pi pi-user" style="font-size: 1.3em;"></i></span>
-							<p:inputText class="campo" id="user" placeholder="Username" required="true" requiredMessage="Error de usuario: se necesita un valor."/>
+							<p:inputText class="campo" id="user" placeholder="Username" required="true" requiredMessage="Error de usuario: se necesita un valor." value="#{loginBean.usuario}" >
+								
+							</p:inputText>
 							
 						</div>
 					</div>
@@ -53,8 +56,10 @@
 					<div class="ui-g-12 ui-md-7 ml-4">
 						<div class="ui-inputgroup">
 							<span class="ui-inputgroup-addon" style="border: 0; background: aqua;"><i class="pi pi-lock" style="font-size: 1.3em"></i></span>
-							<p:password class="campo" id="pass" value="" required="true" requiredMessage="Error de contraseña: se necesita un valor."
-								placeholder="Password" />
+							<p:password class="campo" id="pass" required="true" requiredMessage="Error de contraseña: se necesita un valor."
+								value="#{loginBean.contraseña}" placeholder="Password" binding="#{pass}" >
+								
+								</p:password>
 						</div>
 					</div>
 					<p:message class="ui-g-12 ui-md-3 justify-content-center ml-4" display="text" style="font-size: 0.8em" for="pass">
@@ -65,13 +70,17 @@
 			<p:spacer width="0" height="100" />
 			<div class="ui-g-12 ui-md-4"></div>
 			
-			<h:commandButton class="btn btn-info ui-md-4" value="Log in"/>
+			
+			
+			<p:commandButton class="btn btn-info ui-md-4" value="Log in" action="#{loginBean.doComparar()}" validateClient="true" >
+				
+			</p:commandButton>
 			
 			
 
 			<div class="ui-g">
 				<div class="ui-g-12 ui-md-6 ui-lg-4"> 
-					<p:link value="Registrar como usuario" outcome="RegistroCliente" ajax="false" ></p:link>
+					<p:link value="Registrar como usuario" outcome="RegistroUsuario" ajax="false" ></p:link>
 				</div>
 				<div class="ui-g-12 ui-md-6 ui-lg-4">
 					<p:link value="Registrar como vendedor" outcome="RegistroVendedor" ajax="false"/> 
