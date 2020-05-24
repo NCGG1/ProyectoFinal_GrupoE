@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ <h:head>
+
+	<link rel="stylesheet" type="text/css" href="./css/principal.css" />
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+		crossorigin="anonymous" />
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/all.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/5.12.0/css/v4-shims.min-jsf.css" />
+
+
+</h:head>
+<h:body style="margin:0px;font-size:16px;
+text-align: center;
+	
+ ">
+<p:breadCrumb class="barra" style="background: rgba(130,30,30,0.2); font-size:14px" >
+		<p:menuitem value="Categories" url="#" />
+		
+		<p:menuitem value="Inicio" url="index.xhtml#" />
+	</p:breadCrumb>
+	
+
+<div class=" flex-row-reverse row ui-md-12  bg-dark">
+
+  <h1  style="color: aqua;" >T-VEO</h1>
+  
+  </div>
+<br></br>
+
+
+<div class="container">
+<div class="card  border-info  mb-3 shadow-lg p-3 mb-5 bd-white">
+	<div class="card-body">
+	<div style="background: #1488CC;  
+    background: -webkit-linear-gradient(to right,rgb(15, 68, 85), #17a2b8);  
+    background: linear-gradient(to right, rgb(15, 68, 85),#17a2b8);
+    color:white;"  class="card-header">Registro Administrador</div>
+		
+		<h:form id="form">
+<br></br> 
+<br></br> 
+
+<p:panel id="basic" header="Informacion General"  style="margin-bottom:20px">
+<h:panelGrid columns="4" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="ui-fluid">
+    <p:outputLabel for="nombre" value="Nombre(s):" />
+    <p:inputText class="campo"  id="nombre" placeholder="Nombre(s)"/>
+ 
+    <p:outputLabel for="apellido" value="Apellidos:" />
+    <p:inputText class="campo"  id="apellido" placeholder="Apellidos"/>
+ 
+    <p:outputLabel for="cedula" value="Cedula:" />
+    <p:inputText class="campo" id="cedula" placeholder="Cedula"/>
+    
+            <p:outputLabel for="sede" value="Sede: " />
+            <p:selectOneMenu id="sede" value="#{metodo}" style="width:230px">
+                <f:selectItem itemLabel="habia ponido mi sede aqui" itemValue="" noSelectionOption="false" />
+                <f:selectItems value="#{otroMetodo}" />
+            </p:selectOneMenu>
+ </h:panelGrid>
+ </p:panel>
+
+<p:panel id="dom" header="Domicilio" style="margin-bottom:20px">
+<h:panelGrid columns="4" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="ui-fluid">
+    <p:outputLabel for="departamento" value="Departamento:" />
+    <p:inputText class="campo"  id="departamento" placeholder="Departamento" />
+ 
+    <p:outputLabel for="ciudad" value="Ciudad:" />
+    <p:inputText class="campo"  id="ciudad" placeholder="Ciudad" />
+ 
+    <p:outputLabel for="direccion" value="Direccion:" />
+    <p:inputText class="campo"  id="direccion" placeholder="Direccion" />
+ </h:panelGrid>
+ </p:panel>
+ 		
+			<div class="flex-row-reverse row ui-md-12">
+			<h:button class="btn btn-outline-info " value="Registrarse"  ></h:button></div>
+		</h:form> 
+		
+		</div>
+		</div>
+		</div>
+
+</h:body>
+</html>
